@@ -11,7 +11,7 @@ return {
   {
     "MunifTanjim/eslint.nvim",
     dependencies = { "neovim/nvim-lspconfig", "jose-elias-alvarez/null-ls.nvim" },
-    ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+    ft = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue" },
     config = function()
       require("eslint").setup()
     end
@@ -19,7 +19,7 @@ return {
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+    ft = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue" },
     opts = {},
   },
   {
@@ -30,7 +30,10 @@ return {
     }
     end
   },
-
+  {
+    "tpope/vim-sleuth",
+    event = "User AstroFile"
+  }
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
