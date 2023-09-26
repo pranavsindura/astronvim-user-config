@@ -27,6 +27,10 @@ return {
       end,
       desc = "Pick to close",
     },
+    ["<C-u>"] = { "<C-u>zz" },
+    ["<C-d>"] = { "<C-d>zz" },
+    ["n"] = { "nzzzv" },
+    ["N"] = { "Nzzzv" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
