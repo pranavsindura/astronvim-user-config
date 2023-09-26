@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "monokai-pro",
+  colorscheme = "sonokai",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
