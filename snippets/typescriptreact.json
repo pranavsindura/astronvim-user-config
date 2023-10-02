@@ -1,0 +1,56 @@
+{
+  "React Native Functional Component": {
+    "prefix": "xrnfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface Props {}",
+      "",
+      "const ${1:$TM_FILENAME_BASE}: React.FC<Props> = _props => {",
+      "\treturn null;",
+      "};",
+      "",
+      "export default ${1:$TM_FILENAME_BASE};",
+      ""
+    ],
+    "description": "Create React Native Functional Component"
+  },
+  "React Native Functional Component + Redux": {
+    "prefix": "xrnfcr",
+    "body": [
+      "import React from 'react';",
+      "import { ConnectedProps, connect } from 'react-redux';",
+      "",
+      "interface Props extends PropsFromRedux {}",
+      "",
+      "const ${1:$TM_FILENAME_BASE}: React.FC<Props> = _props => {",
+      "\treturn null;",
+      "};",
+      "",
+      "const mapStateToProps = ({}) => ({});",
+      "",
+      "const mapDispatchToProps = {};",
+      "",
+      "const connector = connect(mapStateToProps, mapDispatchToProps);",
+      "type PropsFromRedux = ConnectedProps<typeof connector>;",
+      "",
+      "export default connector(${1:$TM_FILENAME_BASE});",
+      ""
+    ],
+    "description": "Create React Native Functional Component + Redux"
+  },
+  "Destructure Object": {
+    "prefix": "xdo",
+    "body": [
+      "const {$2} = $1;"
+    ],
+    "description": "Destructure an Object"
+  },
+  "Destructure Array": {
+    "prefix": "xda",
+    "body": [
+      "const [$2] = $1;"
+    ],
+    "description": "Destructure an Array"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "React Native Style Sheet": {
+    "prefix": "xrnss",
+    "body": [
+      "import { StyleSheet } from 'react-native';",
+      "",
+      "const styles = StyleSheet.create({});",
+      "",
+      "export default styles;",
+      ""
+    ],
+    "description": "Create React Native Style Sheet"
+  },
+  "React Native Export Default": {
+    "prefix": "xrned",
+    "body": ["export { default } from '$1';", ""],
+    "description": "Create React Native Export Default"
+  },
+  "Destructure Object": {
+    "prefix": "xdo",
+    "body": ["const {$2} = $1;"],
+    "description": "Destructure an Object"
+  },
+  "Destructure Array": {
+    "prefix": "xda",
+    "body": ["const [$2] = $1;"],
+    "description": "Destructure an Array"
+  }
+}
