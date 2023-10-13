@@ -34,6 +34,11 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["<leader>ff"] = { function() require("telescope.builtin").find_files({ previewer = false }) end, desc = "Find files" },
+    ["<leader>fF"] = {
+      function() require("telescope.builtin").find_files { previewer = false, hidden = true, no_ignore = true } end,
+      desc = "Find all files",
+    }
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
