@@ -11,7 +11,7 @@ return {
       -- Set a formatter
       -- null_ls.builtins.formatting.stylua,
       -- null_ls.builtins.formatting.prettier,
-      require("typescript.extensions.null-ls.code-actions"),
+      -- require("typescript.extensions.null-ls.code-actions"),
     }
     return config -- return final config table
   end,
