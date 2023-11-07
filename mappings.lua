@@ -45,27 +45,68 @@ return {
     ["<leader>bx"] = {
       function()
         require("harpoon.mark").add_file()
-        require("notify")("Added Harpoon Mark", "info", {
-          title = "Harpoon"
+        require "notify"("Added Harpoon Mark", "info", {
+          title = "Harpoon",
         })
       end,
       desc = "Add Harpoon Mark",
+    },
+    ["<leader>bX"] = {
+      function()
+        require("harpoon.mark").rm_file()
+        require "notify"("Removed Harpoon Mark", "info", {
+          title = "Harpoon",
+        })
+      end,
+      desc = "Remove Harpoon Mark",
     },
     ["<leader>fx"] = {
       "<cmd>Telescope harpoon marks<CR>",
       desc = "Find Harpoon Marks",
     },
-    ["]h"] = {
+    ["]x"] = {
       function()
         require("harpoon.ui").nav_next() -- navigates to next mark
       end,
       desc = "Next Harpoon Mark",
     },
-    ["[h"] = {
+    ["[x"] = {
       function()
         require("harpoon.ui").nav_prev() -- navigates to prev mark
       end,
       desc = "Previous Harpoon Mark",
+    },
+    ["]<space>"] = {
+      "m`o<esc>``",
+      desc = "Put Blank below",
+    },
+    ["[<space>"] = {
+      "m`O<esc>``",
+      desc = "Put Blank above",
+    },
+    ["]q"] = {
+      ":cnext<CR>",
+      desc = "Next Quickfix Item",
+    },
+    ["[q"] = {
+      ":cprevious<CR>",
+      desc = "Previous Quickfix Item",
+    },
+    ["<leader>fq"] = {
+      ":copen<CR>",
+      desc = "Open Quickfix List",
+    },
+    ["<leader>fQ"] = {
+      ":cclose<CR>",
+      desc = "Close Quickfix List",
+    },
+    ["]e"] = {
+      ":move .+1<cr>",
+      desc = "Move Line Below",
+    },
+    ["[e"] = {
+      ":move .-2<cr>",
+      desc = "Move Line Above",
     },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
@@ -73,5 +114,15 @@ return {
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+  v = {
+    -- ["]e"] = {
+    --   ":move '>+1<cr>gv",
+    --   desc = "Move Line Below",
+    -- },
+    -- ["[e"] = {
+    --   ":move '>-2<cr>gv",
+    --   desc = "Move Line Above",
+    -- },
   },
 }
