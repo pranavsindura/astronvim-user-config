@@ -77,6 +77,7 @@ return {
       pattern = "AstroBufsUpdated",
       callback = function() vim.cmd "checktime" end,
     })
+    require("telescope").load_extension('harpoon')
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
