@@ -61,7 +61,7 @@ return {
       desc = "Remove Harpoon Mark",
     },
     ["<leader>fx"] = {
-      "<cmd>Telescope harpoon marks<CR>",
+      "<cmd>Telescope harpoon marks previewer=false<CR>",
       desc = "Find Harpoon Marks",
     },
     ["]x"] = {
@@ -93,12 +93,21 @@ return {
       desc = "Previous Quickfix Item",
     },
     ["<leader>fq"] = {
-      ":copen<CR>",
-      desc = "Open Quickfix List",
-    },
-    ["<leader>fQ"] = {
-      ":cclose<CR>",
-      desc = "Close Quickfix List",
+      function()
+        local qf_exists = false
+        for _, win in pairs(vim.fn.getwininfo()) do
+          if win["quickfix"] == 1 then
+            qf_exists = true
+          end
+        end
+
+        if qf_exists then
+          vim.cmd("cclose")
+        else
+          vim.cmd("copen")
+        end
+      end,
+      desc = "Toggle Quickfix List",
     },
     ["]e"] = {
       ":move .+1<cr>",
@@ -107,6 +116,14 @@ return {
     ["[e"] = {
       ":move .-2<cr>",
       desc = "Move Line Above",
+    },
+    ["]p"] = {
+      "o<esc>p",
+      desc = "Paste Below"
+    },
+    ["[p"] = {
+      "O<esc>p",
+      desc = "Paste Above"
     },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command

@@ -4,7 +4,7 @@
     "body": [
       "import { StyleSheet } from 'react-native';",
       "",
-      "const styles = StyleSheet.create({});",
+      "const styles = StyleSheet.create({$1});",
       "",
       "export default styles;",
       ""
@@ -18,12 +18,12 @@
   },
   "Destructure Object": {
     "prefix": "xdo",
-    "body": ["const {$2} = $1;"],
+    "body": ["const {\n} = $1;"],
     "description": "Destructure an Object"
   },
   "Destructure Array": {
     "prefix": "xda",
-    "body": ["const [$2] = $1;"],
+    "body": ["const [\n] = $1;"],
     "description": "Destructure an Array"
   }
 }

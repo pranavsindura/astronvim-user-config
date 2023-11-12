@@ -42,14 +42,14 @@
   "Destructure Object": {
     "prefix": "xdo",
     "body": [
-      "const {$2} = $1;"
+      "const {\n} = $1;"
     ],
     "description": "Destructure an Object"
   },
   "Destructure Array": {
     "prefix": "xda",
     "body": [
-      "const [$2] = $1;"
+      "const [\n] = $1;"
     ],
     "description": "Destructure an Array"
   }
