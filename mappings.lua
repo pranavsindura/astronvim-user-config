@@ -96,15 +96,13 @@ return {
       function()
         local qf_exists = false
         for _, win in pairs(vim.fn.getwininfo()) do
-          if win["quickfix"] == 1 then
-            qf_exists = true
-          end
+          if win["quickfix"] == 1 then qf_exists = true end
         end
 
         if qf_exists then
-          vim.cmd("cclose")
+          vim.cmd "cclose"
         else
-          vim.cmd("copen")
+          vim.cmd "copen"
         end
       end,
       desc = "Toggle Quickfix List",
@@ -119,11 +117,21 @@ return {
     },
     ["]p"] = {
       "o<esc>p",
-      desc = "Paste Below"
+      desc = "Paste Below",
     },
     ["[p"] = {
       "O<esc>p",
-      desc = "Paste Above"
+      desc = "Paste Above",
+    },
+    ["<leader>o"] = {
+      function()
+        if vim.bo.filetype == "neo-tree" then
+          vim.cmd.wincmd "p"
+        else
+          vim.cmd "Neotree action=focus source=last"
+        end
+      end,
+      desc = "Toggle Explorer Focus",
     },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
@@ -133,6 +141,15 @@ return {
     -- ["<esc>"] = false,
   },
   v = {
+    [">"] = {
+      ">gv",
+      desc = "Indent Right",
+    },
+    ["<"] = {
+      "<gv",
+      desc = "Indent Left",
+    },
+
     -- ["]e"] = {
     --   ":move '>+1<cr>gv",
     --   desc = "Move Line Below",

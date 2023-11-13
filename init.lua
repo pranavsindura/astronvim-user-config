@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "edge",
+  colorscheme = "nightfox",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -41,7 +41,7 @@ return {
       },
       disabled = { -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        -- "lua_ls",
+        "lua_ls",
         "tsserver",
       },
       timeout_ms = 5000, -- default format timeout
@@ -77,7 +77,7 @@ return {
       pattern = "AstroBufsUpdated",
       callback = function() vim.cmd "checktime" end,
     })
-    require("telescope").load_extension('harpoon')
+    require("telescope").load_extension "harpoon"
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
