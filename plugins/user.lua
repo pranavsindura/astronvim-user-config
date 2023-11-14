@@ -31,10 +31,10 @@ return {
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
   },
-  {
-    "lewis6991/gitsigns.nvim",
-    enabled = false,
-  },
+  -- {
+  --   "lewis6991/gitsigns.nvim",
+  --   enabled = false,
+  -- },
   {
     "folke/flash.nvim",
     event = "VeryLazy",

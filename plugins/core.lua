@@ -24,23 +24,30 @@ return {
       opts.statusline = { -- statusline
         hl = { fg = "fg", bg = "bg" },
         status.component.mode { mode_text = { padding = { left = 1, right = 1 } } },
-        status.component.git_branch(),
         status.component.file_info {
-          filetype = false,
+          file_icon = false,
           filename = {
             fname = function() return vim.fn.getcwd() end,
-            padding = { left = 1 },
           },
           file_modified = false,
+          file_read_only = false,
         },
-        status.component.git_diff(),
+        status.component.git_branch(),
+        status.component.file_info {
+          file_modified = false,
+          filename = {
+            fname = function(nr) return vim.api.nvim_buf_get_name(nr) end,
+            modify = ":p:."
+          }
+        },
+        -- status.component.git_diff(),
         status.component.diagnostics(),
         status.component.fill(),
         status.component.cmd_info(),
         status.component.fill(),
         status.component.lsp(),
         status.component.treesitter(),
-        status.component.nav(),
+        -- status.component.nav(),
         status.component.mode { surround = { separator = "right" } },
       }
 
