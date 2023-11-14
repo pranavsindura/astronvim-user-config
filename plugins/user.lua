@@ -17,9 +17,6 @@ return {
     init = function() vim.g.edge_style = "aura" end,
   },
   {
-    "EdenEast/nightfox.nvim",
-  },
-  {
     "tpope/vim-sleuth",
     event = "User AstroFile",
   },
