@@ -133,14 +133,6 @@ return {
       end,
       desc = "Toggle Explorer Focus",
     },
-    ["<leader>gd"] = {
-      function ()
-        vim.cmd("Gvdiffsplit")
-      end,
-      desc = "Git Diff - Vertical split"
-    }
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   t = {
     -- setting a mapping to false will disable it

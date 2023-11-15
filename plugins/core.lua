@@ -37,8 +37,8 @@ return {
           file_modified = false,
           filename = {
             fname = function(nr) return vim.api.nvim_buf_get_name(nr) end,
-            modify = ":p:."
-          }
+            modify = ":p:.",
+          },
         },
         -- status.component.git_diff(),
         status.component.diagnostics(),
@@ -153,6 +153,30 @@ return {
         paths = { "./lua/user/snippets" },
       }
     end,
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = {
+      on_attach = function(bufnr)
+        local buf_name = vim.api.nvim_buf_get_name(bufnr)
+
+        -- Use this to ignore gitsigns on certain file extenstions
+        local ignore_extenstions = { ".ts", ".png", ".webp" }
+
+        for _, extenstion in pairs(ignore_extenstions) do
+          if buf_name:match(extenstion .. "$") then
+            -- local file_name = vim.fn.fnamemodify(buf_name, ":p:.")
+            -- require "notify"("Skipping Gitsigns on " .. file_name, "info", {
+            --   title = "GitSigns",
+            -- })
+            return false
+          end
+        end
+
+        return true
+      end,
+      current_line_blame = true,
+    },
   },
   -- {
   --   "windwp/nvim-autopairs",
