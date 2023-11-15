@@ -161,7 +161,7 @@ return {
         local buf_name = vim.api.nvim_buf_get_name(bufnr)
 
         -- Use this to ignore gitsigns on certain file extenstions
-        local ignore_extenstions = { ".ts", ".png", ".webp" }
+        local ignore_extenstions = { ".png", ".webp" }
 
         for _, extenstion in pairs(ignore_extenstions) do
           if buf_name:match(extenstion .. "$") then
