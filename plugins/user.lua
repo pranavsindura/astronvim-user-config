@@ -31,10 +31,38 @@ return {
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
   },
-  -- {
-  --   "lewis6991/gitsigns.nvim",
-  --   enabled = false,
-  -- },
+  {
+    "nomnivore/ollama.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+
+    -- All the user commands added by the plugin
+    cmd = { "Ollama", "OllamaModel", "OllamaServe", "OllamaServeStop" },
+
+    -- Sample keybind for prompting. Note that the <c-u> is important for selections to work properly.
+    keys = {
+      {
+        "<leader>bo",
+        ":<c-u>lua require('ollama').prompt()<cr>",
+        desc = "ollama prompt",
+        mode = { "n", "v" },
+      },
+    },
+    opts = {
+      -- your configuration overrides
+    },
+  },
+  {
+    "Wansmer/treesj",
+    keys = {},
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("treesj").setup {--[[ your config ]]
+        use_default_keymaps = false,
+      }
+    end,
+  },
   {
     "folke/flash.nvim",
     event = "VeryLazy",

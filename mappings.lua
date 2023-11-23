@@ -133,6 +133,12 @@ return {
       end,
       desc = "Toggle Explorer Focus",
     },
+    ["<leader>m"] = {
+      function ()
+        require('treesj').toggle()
+      end,
+      desc = "Toggle Code Join / Split"
+    }
   },
   t = {
     -- setting a mapping to false will disable it
