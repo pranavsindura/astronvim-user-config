@@ -138,6 +138,10 @@ return {
         require('treesj').toggle()
       end,
       desc = "Toggle Code Join / Split"
+    },
+    ["<leader>r"] = {
+      ":Ranger<CR>",
+      desc = "Open Ranger"
     }
   },
   t = {

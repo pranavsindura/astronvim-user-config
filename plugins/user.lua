@@ -64,6 +64,13 @@ return {
     end,
   },
   {
+    "francoiscabrol/ranger.vim",
+    dependencies = { "rbgrouleff/bclose.vim" },
+    lazy = false,
+    config = function ()
+    end,
+  },
+  {
     "folke/flash.nvim",
     event = "VeryLazy",
     ---@type Flash.Config
