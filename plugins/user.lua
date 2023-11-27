@@ -67,8 +67,7 @@ return {
     "francoiscabrol/ranger.vim",
     dependencies = { "rbgrouleff/bclose.vim" },
     lazy = false,
-    config = function ()
-    end,
+    config = function() end,
   },
   {
     "folke/flash.nvim",
