@@ -37,7 +37,7 @@ return {
           file_modified = false,
           filename = {
             fname = function(nr) return vim.api.nvim_buf_get_name(nr) end,
-            modify = ":p:.",
+            modify = ":p:t",
           },
         },
         -- status.component.git_diff(),

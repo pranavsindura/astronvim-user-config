@@ -66,7 +66,7 @@ return {
   {
     "francoiscabrol/ranger.vim",
     dependencies = { "rbgrouleff/bclose.vim" },
-    lazy = false,
+    event = "VeryLazy",
     config = function() end,
   },
   {
