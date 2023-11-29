@@ -134,19 +134,27 @@ return {
       desc = "Toggle Explorer Focus",
     },
     ["<leader>m"] = {
-      function ()
-        require('treesj').toggle()
-      end,
-      desc = "Toggle Code Join / Split"
+      function() require("treesj").toggle() end,
+      desc = "Toggle Code Join / Split",
     },
     ["<leader>r"] = {
       ":Ranger<CR>",
-      desc = "Open Ranger"
-    }
+      desc = "Open Ranger",
+    },
+    ["<leader>tt"] = {
+      ':ToggleTerm direction="tab"<CR>',
+      desc = "ToggleTerm tab",
+    },
   },
   t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<esc>"] = {
+      "<C-\\><C-n>",
+      desc = "Exit Term Mode",
+    },
+    ["jk"] = {
+      "<C-\\><C-n>",
+      desc = "Exit Term Mode",
+    },
   },
   v = {
     [">"] = {
