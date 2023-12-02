@@ -42,39 +42,9 @@ return {
       function() require("telescope.builtin").find_files { previewer = false, hidden = true, no_ignore = true } end,
       desc = "Find all files",
     },
-    ["<leader>bx"] = {
-      function()
-        require("harpoon.mark").add_file()
-        require "notify"("Added Harpoon Mark", "info", {
-          title = "Harpoon",
-        })
-      end,
-      desc = "Add Harpoon Mark",
-    },
-    ["<leader>bX"] = {
-      function()
-        require("harpoon.mark").rm_file()
-        require "notify"("Removed Harpoon Mark", "info", {
-          title = "Harpoon",
-        })
-      end,
-      desc = "Remove Harpoon Mark",
-    },
     ["<leader>fx"] = {
-      "<cmd>Telescope harpoon marks previewer=false<CR>",
-      desc = "Find Harpoon Marks",
-    },
-    ["]x"] = {
-      function()
-        require("harpoon.ui").nav_next() -- navigates to next mark
-      end,
-      desc = "Next Harpoon Mark",
-    },
-    ["[x"] = {
-      function()
-        require("harpoon.ui").nav_prev() -- navigates to prev mark
-      end,
-      desc = "Previous Harpoon Mark",
+      ":TroubleToggle<CR>",
+      desc = "Toggle Trouble",
     },
     ["]<space>"] = {
       "m`o<esc>``",
@@ -146,16 +116,7 @@ return {
       desc = "ToggleTerm tab",
     },
   },
-  t = {
-    ["<esc>"] = {
-      "<C-\\><C-n>",
-      desc = "Exit Term Mode",
-    },
-    ["jk"] = {
-      "<C-\\><C-n>",
-      desc = "Exit Term Mode",
-    },
-  },
+  t = {},
   v = {
     [">"] = {
       ">gv",
@@ -165,14 +126,5 @@ return {
       "<gv",
       desc = "Indent Left",
     },
-
-    -- ["]e"] = {
-    --   ":move '>+1<cr>gv",
-    --   desc = "Move Line Below",
-    -- },
-    -- ["[e"] = {
-    --   ":move '>-2<cr>gv",
-    --   desc = "Move Line Above",
-    -- },
   },
 }

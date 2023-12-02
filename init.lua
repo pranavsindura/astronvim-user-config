@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "edge",
+  colorscheme = "midnight",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -77,7 +77,6 @@ return {
       pattern = "AstroBufsUpdated",
       callback = function() vim.cmd "checktime" end,
     })
-    require("telescope").load_extension "harpoon"
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
