@@ -1,16 +1,17 @@
 return {
   {
     "tpope/vim-fugitive",
-    event = "User AstroGitFile",
+    event = "VeryLazy",
   },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    event = "User AstroFile",
+    event = "VeryLazy",
   },
   {
     "jose-elias-alvarez/typescript.nvim",
     config = function() require("typescript").setup {} end,
+    enabled = false,
   },
   {
     "sainnhe/edge",
