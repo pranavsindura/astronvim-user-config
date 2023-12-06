@@ -9,9 +9,13 @@ return {
     event = "VeryLazy",
   },
   {
-    "jose-elias-alvarez/typescript.nvim",
-    config = function() require("typescript").setup {} end,
-    enabled = false,
+    "johmsalas/text-case.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function()
+      require("textcase").setup {}
+      require("telescope").load_extension "textcase"
+    end,
+    event = "VeryLazy",
   },
   {
     "sainnhe/edge",

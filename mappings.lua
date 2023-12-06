@@ -46,6 +46,14 @@ return {
       ":TroubleToggle<CR>",
       desc = "Toggle Trouble",
     },
+    ["]x"] = {
+      function() require("trouble").next { skip_groups = true, jump = true } end,
+      desc = "Next Trouble Item",
+    },
+    ["[x"] = {
+      function() require("trouble").previous { skip_groups = true, jump = true } end,
+      desc = "Previous Trouble Item",
+    },
     ["]<space>"] = {
       "m`o<esc>``",
       desc = "Put Blank below",
@@ -111,9 +119,9 @@ return {
       ":Ranger<CR>",
       desc = "Open Ranger",
     },
-    ["<leader>tt"] = {
-      ':ToggleTerm direction="tab"<CR>',
-      desc = "ToggleTerm tab",
+    ["ga."] = {
+      "<cmd>TextCaseOpenTelescope<CR>",
+      desc = "Open TextCase",
     },
   },
   t = {},
@@ -126,5 +134,16 @@ return {
       "<gv",
       desc = "Indent Left",
     },
+    ["ga."] = {
+      "<cmd>TextCaseOpenTelescope<CR>",
+      desc = "Open TextCase",
+    },
+  },
+  i = {
+    ["<C-H>"] = "<LEFT>",
+    ["<C-J>"] = "<DOWN>",
+    ["<C-K>"] = "<UP>",
+    ["<C-L>"] = "<RIGHT>",
+    ["<C-;>"] = "<BS>",
   },
 }
