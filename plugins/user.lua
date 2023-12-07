@@ -90,4 +90,33 @@ return {
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
   },
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {
+      settings = {
+        tsserver_format_options = {
+          -- insertSpaceAfterCommaDelimiter = true,
+          -- insertSpaceAfterConstructor = false,
+          -- insertSpaceAfterSemicolonInForStatements = true,
+          -- insertSpaceBeforeAndAfterBinaryOperators = true,
+          -- insertSpaceAfterKeywordsInControlFlowStatements = true,
+          -- insertSpaceAfterFunctionKeywordForAnonymousFunctions = true,
+          -- insertSpaceBeforeFunctionParenthesis = false,
+          -- insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis = false,
+          -- insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets = false,
+          -- insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = true,
+          insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
+          -- insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces = false,
+          -- insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces = false,
+          -- insertSpaceAfterTypeAssertion = false,
+          -- placeOpenBraceOnNewLineForFunctions = false,
+          -- placeOpenBraceOnNewLineForControlBlocks = false,
+          -- semicolons = "ignore",
+          -- indentSwitchCase = true,
+        },
+      },
+    },
+    event = "VeryLazy",
+  },
 }
