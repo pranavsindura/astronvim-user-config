@@ -21,6 +21,16 @@ return {
         -- "prettier",
         -- "stylua",
       })
+
+      opts.handlers = {
+        eslint_d = function(_source_name, _methods)
+          local null_ls = require "null-ls"
+          -- Skip formatting using eslint_d for speed
+          -- null_ls.register(null_ls.builtins.formatting.eslint_d)
+          null_ls.register(null_ls.builtins.diagnostics.eslint_d)
+          null_ls.register(null_ls.builtins.code_actions.eslint_d)
+        end,
+      }
     end,
   },
   {
