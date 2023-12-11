@@ -19,10 +19,12 @@ return {
   },
   {
     "sainnhe/edge",
-    init = function() vim.g.edge_style = "aura" end,
+    init = function() vim.g.edge_style = "neon" end,
+    event = "VeryLazy",
   },
   {
     "dasupradyumna/midnight.nvim",
+    event = "VeryLazy",
   },
   {
     "tpope/vim-sleuth",
