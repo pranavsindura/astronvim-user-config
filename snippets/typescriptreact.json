@@ -6,11 +6,11 @@
       "",
       "interface Props {}",
       "",
-      "const ${1:$TM_FILENAME_BASE}: React.FC<Props> = _props => {",
+      "const $TM_FILENAME_BASE: React.FC<Props> = _props => {",
       "\treturn null;",
       "};",
       "",
-      "export default ${1:$TM_FILENAME_BASE};",
+      "export default $TM_FILENAME_BASE;",
       ""
     ],
     "description": "Create React Native Functional Component"
@@ -23,7 +23,7 @@
       "",
       "interface Props extends PropsFromRedux {}",
       "",
-      "const ${1:$TM_FILENAME_BASE}: React.FC<Props> = _props => {",
+      "const $TM_FILENAME_BASE: React.FC<Props> = _props => {",
       "\treturn null;",
       "};",
       "",
@@ -34,7 +34,7 @@
       "const connector = connect(mapStateToProps, mapDispatchToProps);",
       "type PropsFromRedux = ConnectedProps<typeof connector>;",
       "",
-      "export default connector(${1:$TM_FILENAME_BASE});",
+      "export default connector($TM_FILENAME_BASE);",
       ""
     ],
     "description": "Create React Native Functional Component + Redux"
