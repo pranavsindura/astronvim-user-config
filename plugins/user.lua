@@ -93,33 +93,14 @@ return {
     },
   },
   {
-    "pmizio/typescript-tools.nvim",
-    enabled = false,
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    opts = {
-      settings = {
-        tsserver_format_options = {
-          -- insertSpaceAfterCommaDelimiter = true,
-          -- insertSpaceAfterConstructor = false,
-          -- insertSpaceAfterSemicolonInForStatements = true,
-          -- insertSpaceBeforeAndAfterBinaryOperators = true,
-          -- insertSpaceAfterKeywordsInControlFlowStatements = true,
-          -- insertSpaceAfterFunctionKeywordForAnonymousFunctions = true,
-          -- insertSpaceBeforeFunctionParenthesis = false,
-          -- insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis = false,
-          -- insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets = false,
-          -- insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = true,
-          insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
-          -- insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces = false,
-          -- insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces = false,
-          -- insertSpaceAfterTypeAssertion = false,
-          -- placeOpenBraceOnNewLineForFunctions = false,
-          -- placeOpenBraceOnNewLineForControlBlocks = false,
-          -- semicolons = "ignore",
-          -- indentSwitchCase = true,
-        },
-      },
-    },
+    "m4xshen/hardtime.nvim",
+    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
     event = "VeryLazy",
+    opts = {
+      disabled_filetypes = {
+        "toggleterm",
+      },
+      disable_mouse = false,
+    },
   },
 }

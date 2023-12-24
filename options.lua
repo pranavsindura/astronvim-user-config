@@ -9,7 +9,7 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "yes", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
-    shell = "/bin/zsh"
+    shell = "/bin/zsh",
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
