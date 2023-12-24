@@ -20,7 +20,7 @@ return {
   {
     "sainnhe/edge",
     init = function() vim.g.edge_style = "neon" end,
-    event = "VeryLazy",
+    lazy = false,
   },
   {
     "dasupradyumna/midnight.nvim",

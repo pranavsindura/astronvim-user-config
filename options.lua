@@ -10,6 +10,9 @@ return {
     signcolumn = "yes", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     shell = "/bin/zsh",
+    fillchars = {
+      diff = "╱",
+    },
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader

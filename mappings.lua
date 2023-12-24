@@ -33,6 +33,7 @@ return {
     ["N"] = { "Nzzzv" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
+    ["<leader>T"] = { name = "Tabs" },
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>ff"] = {
       function() require("telescope.builtin").find_files { previewer = false } end,
@@ -123,12 +124,16 @@ return {
       "<cmd>TextCaseOpenTelescope<CR>",
       desc = "Open TextCase",
     },
-    ["<leader>gD"] = {
+    ["<leader>gd"] = {
       function()
-        vim.cmd.wincmd "h"
-        vim.cmd "q"
+        vim.cmd "tabnew %"
+        require("gitsigns").diffthis()
       end,
-      desc = "Close Git diff",
+      desc = "View Git diff",
+    },
+    ["<leader>Tc"] = {
+      ":tabclose<cr>",
+      desc = "Close current Tab",
     },
   },
   t = {},
