@@ -123,6 +123,13 @@ return {
       "<cmd>TextCaseOpenTelescope<CR>",
       desc = "Open TextCase",
     },
+    ["<leader>gD"] = {
+      function()
+        vim.cmd.wincmd "h"
+        vim.cmd "q"
+      end,
+      desc = "Close Git diff",
+    },
   },
   t = {},
   v = {
