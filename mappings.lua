@@ -135,6 +135,26 @@ return {
       ":tabclose<cr>",
       desc = "Close current Tab",
     },
+    ["dh"] = {
+      function()
+        local current_diffopt = vim.o.diffopt
+        vim.cmd "set diffopt&"
+        vim.cmd "diffget /:2"
+        vim.cmd("set diffopt=" .. current_diffopt)
+        vim.cmd "diffupdate"
+      end,
+      desc = "Get Current Change",
+    },
+    ["dl"] = {
+      function()
+        local current_diffopt = vim.o.diffopt
+        vim.cmd "set diffopt&"
+        vim.cmd "diffget /:3"
+        vim.cmd("set diffopt=" .. current_diffopt)
+        vim.cmd "diffupdate"
+      end,
+      desc = "Get Incoming Change",
+    },
   },
   t = {},
   v = {

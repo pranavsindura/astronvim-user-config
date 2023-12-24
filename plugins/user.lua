@@ -100,6 +100,7 @@ return {
       disabled_filetypes = {
         "toggleterm",
         "neo-tree",
+        "fugitive",
       },
       disable_mouse = false,
     },
