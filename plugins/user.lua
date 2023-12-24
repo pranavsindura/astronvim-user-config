@@ -99,6 +99,7 @@ return {
     opts = {
       disabled_filetypes = {
         "toggleterm",
+        "neo-tree",
       },
       disable_mouse = false,
     },
