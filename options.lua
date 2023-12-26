@@ -13,6 +13,7 @@ return {
     fillchars = {
       diff = "╱",
     },
+    diffopt = "internal,filler,closeoff,linematch:60,iwhite,vertical,indent-heuristic,algorithm:histogram",
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
