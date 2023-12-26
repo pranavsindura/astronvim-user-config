@@ -124,6 +124,10 @@ return {
       "<cmd>TextCaseOpenTelescope<CR>",
       desc = "Open TextCase",
     },
+    ["<leader>tg"] = {
+      function() vim.cmd 'TermExec direction="tab" name=git_diff_current cmd="git diff %"' end,
+      desc = "ToggleTerm git diff",
+    },
     ["<leader>gd"] = {
       function()
         vim.cmd "tabnew %"
