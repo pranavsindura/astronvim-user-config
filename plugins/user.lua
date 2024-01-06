@@ -114,5 +114,9 @@ return {
         require("bamboo").load()
       end,
     },
+    {
+      "xiyaowong/transparent.nvim",
+      lazy = false,
+    },
   },
 }
