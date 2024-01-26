@@ -104,19 +104,19 @@ return {
       },
       disable_mouse = false,
     },
-    {
-      "ribru17/bamboo.nvim",
-      lazy = false,
-      config = function()
-        require("bamboo").setup {
-          -- optional configuration here
-        }
-        require("bamboo").load()
-      end,
-    },
-    {
-      "xiyaowong/transparent.nvim",
-      lazy = false,
-    },
+  },
+  {
+    "ribru17/bamboo.nvim",
+    lazy = false,
+    config = function()
+      require("bamboo").setup {
+        -- optional configuration here
+      }
+      require("bamboo").load()
+    end,
+  },
+  {
+    "xiyaowong/transparent.nvim",
+    lazy = false,
   },
 }
