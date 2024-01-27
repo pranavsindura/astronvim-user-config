@@ -159,6 +159,10 @@ return {
       end,
       desc = "Get Incoming Change",
     },
+    ["<leader>uT"] = {
+      ":TransparentToggle<CR>",
+      desc = "Toggle Transparent",
+    },
   },
   t = {},
   v = {
