@@ -102,19 +102,15 @@ return {
       "O<esc>p",
       desc = "Paste Above",
     },
-    ["<leader>o"] = {
-      function()
-        if vim.bo.filetype == "neo-tree" then
-          vim.cmd.wincmd "p"
-        else
-          vim.cmd "Neotree action=focus source=last"
-        end
-      end,
-      desc = "Toggle Explorer Focus",
-    },
+    ["<leader>o"] = false,
+    ["<leader>e"] = false,
     ["<leader>m"] = {
-      function() require("treesj").toggle() end,
-      desc = "Toggle Code Join / Split",
+      function() require("treesj").split() end,
+      desc = "TreeSJ Split Code",
+    },
+    ["<leader>M"] = {
+      function() require("treesj").join() end,
+      desc = "TreeSJ Join Code",
     },
     ["<leader>r"] = {
       ":Ranger<CR>",
@@ -162,6 +158,27 @@ return {
     ["<leader>uT"] = {
       ":TransparentToggle<CR>",
       desc = "Toggle Transparent",
+    },
+    ["<leader>fh"] = {
+      ":Telescope harpoon marks previewer=false<cr>",
+      desc = "Toggle Harpoon",
+    },
+    ["<leader>bh"] = {
+      function()
+        require("harpoon.mark").add_file()
+        require("notify").notify("Added file to Harpoon", vim.log.levels.INFO, {
+          title = "Harpoon",
+        })
+      end,
+      desc = "Add File to Harpoon",
+    },
+    ["]h"] = {
+      function() require("harpoon.ui").nav_next() end,
+      desc = "Next Harpoon Mark",
+    },
+    ["[h"] = {
+      function() require("harpoon.ui").nav_prev() end,
+      desc = "Previous Harpoon Mark",
     },
   },
   t = {},

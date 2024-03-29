@@ -119,4 +119,14 @@ return {
     "xiyaowong/transparent.nvim",
     lazy = false,
   },
+  {
+    "ThePrimeagen/harpoon",
+    event = "VeryLazy",
+    config = function()
+      require("harpoon").setup {
+        mark_branch = true,
+      }
+      require("telescope").load_extension "harpoon"
+    end,
+  },
 }
