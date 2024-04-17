@@ -120,10 +120,7 @@ return {
     lazy = false,
   },
   {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    event = "VeryLazy",
-    config = function() require("harpoon").setup {} end,
+    "rebelot/kanagawa.nvim",
+    lazy = false,
   },
 }

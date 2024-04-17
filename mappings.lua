@@ -159,67 +159,6 @@ return {
       ":TransparentToggle<CR>",
       desc = "Toggle Transparent",
     },
-    ["<leader>fz"] = {
-      function()
-        local harpoon = require "harpoon"
-        local conf = require("telescope.config").values
-        local function toggle_telescope(harpoon_files)
-          local file_paths = {}
-          for _, item in ipairs(harpoon_files.items) do
-            table.insert(file_paths, item.value)
-          end
-
-          require("telescope.pickers")
-            .new({}, {
-              prompt_title = "Harpoon",
-              finder = require("telescope.finders").new_table {
-                results = file_paths,
-              },
-              previewer = false,
-              path_display = { "shorten" },
-              sorter = conf.generic_sorter {},
-              wrap_results = true,
-            })
-            :find()
-        end
-        toggle_telescope(harpoon:list())
-      end,
-      desc = "Find Harpoon Marks",
-    },
-    ["<leader>bz"] = {
-      function()
-        local harpoon = require "harpoon"
-        harpoon:list():add()
-        require("notify").notify("Added file to Harpoon", vim.log.levels.INFO, {
-          title = "Harpoon",
-        })
-      end,
-      desc = "Add File to Harpoon",
-    },
-    ["<leader>bZ"] = {
-      function()
-        local harpoon = require "harpoon"
-        harpoon:list():remove()
-        require("notify").notify("Removed file from Harpoon", vim.log.levels.INFO, {
-          title = "Harpoon",
-        })
-      end,
-      desc = "Remove file from Harpoon",
-    },
-    ["]z"] = {
-      function()
-        local harpoon = require "harpoon"
-        harpoon:list():next()
-      end,
-      desc = "Next Harpoon Mark",
-    },
-    ["[z"] = {
-      function()
-        local harpoon = require "harpoon"
-        harpoon:list():prev()
-      end,
-      desc = "Previous Harpoon Mark",
-    },
   },
   t = {},
   v = {
